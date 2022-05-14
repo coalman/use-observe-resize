@@ -39,7 +39,7 @@
   "scripts": {
     "build": "tsc --build tsconfig.json cjs.tsconfig.json",
     "test": "vitest",
-    "test:e2e": "playwright test --config ./test",
+    "test:pw": "playwright test --config ./test",
     "format": "prettier --write",
     "dev": "vite"
   },
