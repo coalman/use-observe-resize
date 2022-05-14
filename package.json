@@ -40,7 +40,8 @@
     "build": "tsc --build tsconfig.json cjs.tsconfig.json",
     "test": "vitest",
     "test:pw": "playwright test --config ./test",
-    "format": "prettier --write",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "dev": "vite"
   },
   "peerDependencies": {

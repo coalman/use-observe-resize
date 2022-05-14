@@ -23,6 +23,8 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm install
+      - name: Check formatting
+        run: pnpm run format:check
       - name: Build library
         run: pnpm run build
       - name: Unit test
