@@ -144,6 +144,34 @@ const Example = () => {
 };
 ```
 
+### Ref for the observe target
+
+If you need a ref to the observe target, you can create another [callback ref] that
+stores the element and sets up the ResizeObserver.
+
+```jsx
+import { useRef, useCallback } from "react";
+import { useObserveResize } from "use-observe-resize";
+
+const Example = () => {
+  const ref = useRef(null);
+
+  const observeResize = useObserveResize((entry) => {
+    // ...
+  });
+
+  const setRef = useCallback(
+    (element) => {
+      observeResize(element);
+      ref.current = element;
+    },
+    [observeResize]
+  );
+
+  return <div ref={setRef} />;
+};
+```
+
 [callback ref]: https://reactjs.org/docs/refs-and-the-dom.html#callback-refs
 [resizeobserverentry]: https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserverEntry
 [resizeobserver]: https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver
