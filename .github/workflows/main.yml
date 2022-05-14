@@ -27,3 +27,7 @@ jobs:
         run: pnpm run build
       - name: Unit test
         run: pnpm run test
+      - name: Setup playwright
+        run: pnpm playwright install --with-deps
+      - name: Playwright test
+        run: pnpm run test:pw
