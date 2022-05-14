@@ -1,0 +1,64 @@
+{
+  "name": "use-observe-resize",
+  "description": "React hooks to use ResizeObservers.",
+  "version": "0.0.0",
+  "homepage": "https://github.com/coalman/use-observe-resize",
+  "license": "ISC",
+  "author": {
+    "name": "Michael Coleman",
+    "url": "https://github.com/coalman"
+  },
+  "keywords": [
+    "react",
+    "resize observer",
+    "resize observer hook",
+    "use-resize-observer"
+  ],
+  "packageManager": "pnpm@6.32.11",
+  "files": [
+    "package.json",
+    "LICENSE",
+    "dist/esm/**/*",
+    "dist/cjs/**/*"
+  ],
+  "type": "module",
+  "exports": {
+    "node": {
+      "module": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "default": "./dist/esm/index.js"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/esm/*.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsc --build tsconfig.json cjs.tsconfig.json",
+    "test": "vitest",
+    "test:e2e": "playwright test --config ./test",
+    "format": "prettier --write",
+    "dev": "vite"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.21.1",
+    "@testing-library/react": "13.1.1",
+    "@types/react": "^18.0.8",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "1.3.2",
+    "happy-dom": "3.1.0",
+    "playwright": "1.21.1",
+    "prettier": "2.6.2",
+    "typescript": "4.6.4",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "vite": "2.9.7",
+    "vitest": "0.10.1"
+  }
+}

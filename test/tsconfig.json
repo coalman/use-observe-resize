@@ -1,0 +1,11 @@
+{
+  "include": ["**/*.ts"],
+  "compilerOptions": {
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "lib": ["ESNext"],
+    "target": "ESNext",
+    "types": []
+  }
+}
