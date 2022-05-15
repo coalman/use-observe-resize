@@ -23,6 +23,7 @@ export function ResizableBox(props: {
     (element: HTMLDivElement | null) => {
       observeResize(element);
       if (element) {
+        /* eslint-disable @typescript-eslint/no-explicit-any */
         (element as any).readSizeRecords = () => {
           const records = refSizeRecords.current;
           refSizeRecords.current = [];
