@@ -25,6 +25,6 @@ export function useObserveResize(
         refResizeObserver.current?.disconnect();
       }
     },
-    [options]
+    [options, getResizeObserver, refResizeObserver]
   );
 }
