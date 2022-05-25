@@ -1,0 +1,35 @@
+name: "Build and test"
+description: "Build and run tests."
+runs:
+  using: "composite"
+  steps:
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v2.2.1
+      with:
+        version: 6.32.11
+    - name: Setup node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+        cache: pnpm
+    - name: Install dependencies
+      run: pnpm install
+      shell: bash
+    - name: Check formatting
+      run: pnpm run format:check
+      shell: bash
+    - name: Lint
+      run: pnpm run lint
+      shell: bash
+    - name: Build library
+      run: pnpm run build
+      shell: bash
+    - name: Unit test
+      run: pnpm run test
+      shell: bash
+    - name: Setup playwright
+      run: pnpm playwright install --with-deps
+      shell: bash
+    - name: Playwright test
+      run: pnpm run test:pw
+      shell: bash
