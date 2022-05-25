@@ -1,12 +1,9 @@
-name: CI
+name: Publish
 on:
-  push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
+  release:
+    types: [published]
 jobs:
   build:
-    name: build and test
     timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
@@ -14,3 +11,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Build and test
         uses: ./.github/actions/build-and-test
+      - name: Publish to npm
+        run: pnpm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
