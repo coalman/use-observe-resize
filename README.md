@@ -74,6 +74,8 @@ Returns an array with two items:
 
 ### Example
 
+From the [Deep Dive: How to manage a list of refs using a ref callback](https://beta.reactjs.org/learn/manipulating-the-dom-with-refs) from the beta react docs:
+
 ```jsx
 import { useResizeObserver } from "use-observe-resize";
 
