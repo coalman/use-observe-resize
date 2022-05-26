@@ -64,7 +64,6 @@ test("resizing unrelated elements shouldn't cause observations", async ({
 });
 
 test("multiple sequential resizes can be observed on one element", async ({
-  page,
   boxes: [box],
 }) => {
   const resizes = [
