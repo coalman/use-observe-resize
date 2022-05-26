@@ -1,7 +1,7 @@
 {
   "name": "use-observe-resize",
   "description": "React hooks to use ResizeObservers.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/coalman/use-observe-resize",
   "license": "ISC",
   "author": {
