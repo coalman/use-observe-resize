@@ -46,7 +46,7 @@ export function ResizableBox(props: {
         height,
       }}
       onKeyDown={(event) => {
-        let setter;
+        let setter: typeof setHeight | typeof setWidth;
         let dir = 0;
 
         if (event.key === "ArrowUp") {
