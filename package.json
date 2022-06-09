@@ -21,6 +21,7 @@
     "dist/esm/**/*",
     "dist/cjs/**/*"
   ],
+  "sideEffects": false,
   "type": "module",
   "exports": {
     "node": {
